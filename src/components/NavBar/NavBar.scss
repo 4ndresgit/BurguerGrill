@@ -1,0 +1,54 @@
+$header-bg-color: #f9a03f;
+$header-text-color: #fff;
+$header-padding: 20px;
+
+.header {
+  background-color: $header-bg-color;
+  color: $header-text-color;
+  padding: $header-padding;
+
+  &__container {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      width: 100px;
+    }
+
+    &__titulo {
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &__nav {
+      ul {
+        li {
+          margin-right: 20px;
+
+          a {
+            text-decoration: none;
+            color: $header-text-color;
+            font-weight: bold;
+            transition: all 0.3s ease;
+
+            &:hover {
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header__nav li a {
+  color: $header-text-color;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #333;
+  }
+}

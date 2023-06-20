@@ -1,0 +1,48 @@
+$footer-bg-color: #2b2b2b;
+$footer-padding: 50px;
+$footer-font: whitesmoke;
+
+footer {
+  background-color: $footer-bg-color;
+  padding: $footer-padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .footer-section {
+    width: 30%;
+
+    h3 {
+      color: $footer-font;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $footer-font;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: whitesmoke;
+
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: whitesmoke;
+      text-decoration: none;
+
+      &:hover {
+        color: $footer-font;
+      }
+    }
+  }
+}
