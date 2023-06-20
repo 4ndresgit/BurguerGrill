@@ -1,18 +1,14 @@
 import React from 'react';
 import ProductListContainer from '../ProductListContainer/ProductListContainer';
 
-function HomePage() {
-  const handleAddToCart = (product) => {
-    // agregar producto al carrito
-    console.log('Producto agregado al carrito:', product);
-  };
-
+const HomePage = () => {
   return (
     <div>
-      <h1>HomePage</h1>
-      <ProductListContainer handleAddToCart={handleAddToCart} />
+      <h1>Bienvenido a la página de inicio</h1>
+      <ProductListContainer />
     </div>
   );
-}
+};
 
 export default HomePage;
+

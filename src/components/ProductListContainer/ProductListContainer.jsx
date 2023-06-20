@@ -1,49 +1,37 @@
 import './ProductListContainer.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import ProductService from '../ProductService/ProductService';
 import ProductCard from '../ProductCard/ProductCard';
-import ProductList from '../ProductList/ProductList';
-import data from '../../product.json';
-import ProductDetail from '../ProductDetail/ProductDetail';
 
-function ProductListContainer({ handleAddToCart }) {
-  const [cartItems, setCartItems] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+function ProductListContainer() {
+  const [products, setProducts] = useState([]);
 
-  const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
-    handleAddToCart(product);
-  };
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
-  const openModal = (product) => {
-    setSelectedProduct(product);
-  };
-
-  const closeModal = () => {
-    setSelectedProduct(null);
+  const fetchProducts = async () => {
+    try {
+      const productsData = await ProductService.getProducts();
+      setProducts(productsData);
+    } catch (error) {
+      console.error('Error al obtener los productos:', error);
+    }
   };
 
   return (
-    <ProductList>
-      {data.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-          addToCart={addToCart}
-          openModal={openModal}
-        />
+    <div className='product-list-container'>
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
       ))}
-      {selectedProduct && (
-        <ProductDetail
-          product={selectedProduct}
-          closeModal={closeModal}
-          handleAddToCart={addToCart}
-        />
-      )}
-    </ProductList>
+    </div>
   );
 }
 
 export default ProductListContainer;
+
+
+
 
 
 

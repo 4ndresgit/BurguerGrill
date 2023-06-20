@@ -1,30 +1,31 @@
-/* voy a mostrar informacion del producto como imagen de hamburguesa, nombre, descripcion y precio. Tambien boton 'agregar al carrito'*/
 
-import React from 'react';
+
 import './ProductCard.scss';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function ProductCard({ product, addToCart, openModal }) {
-  const { nombre, descripcion, imagen, precio } = product;
-
-  const handleClick = () => {
-    addToCart(product);
-    openModal(product); 
-  };
+const ProductCard = ({ product }) => {
+  const { id, nombre, descripcion, imagen, precio } = product;
 
   return (
     <div className='product-card'>
-      <img src={imagen} alt={nombre} />
+      <img src={imagen} alt={nombre} className='product-image' />
       <div className='product-details'>
         <h2>{nombre}</h2>
         <p>{descripcion}</p>
         <p>{precio}</p>
-        <button onClick={handleClick}>Agregar al carrito</button>
+        <Link to={`/products/${id}`} className='detail-button'>
+          Ver detalle
+        </Link>
       </div>
     </div>
   );
-}
+};
 
 export default ProductCard;
+
+
+
 
 
 

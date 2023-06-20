@@ -1,10 +1,19 @@
 
-.product-list {
+.product-list-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: auto;
-  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  .product-list-container {
+    margin: 0 -10px;
+  }
+
+  .product-card {
+    width: calc(33.33% - 20px);
+    margin: 0 10px;
+  }
 }
 
 
