@@ -1,0 +1,54 @@
+
+
+.about-section {
+  background-color: #f8f8f8;
+  padding: 40px;
+  
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .highlight {
+    color: #ff5500;
+    font-weight: bold;
+  }
+  
+  .menu-list {
+    list-style-type: none;
+    padding-left: 0;
+    
+    li {
+      margin-bottom: 10px;
+      
+      &:before {
+        content: "\2022";
+        color: #ff5500;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: #ff5500;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: darken(#ff5500, 10%);
+    }
+  }
+}

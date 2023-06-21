@@ -15,18 +15,21 @@ footer {
     h3 {
       color: $footer-font;
       font-size: 1.5rem;
-      margin-bottom: 20px;
+      margin-top: 25px;
+      margin-bottom: 25px;
     }
 
     p {
       color: $footer-font;
-      font-size: 1rem;
+      font-size: 1.4rem;
       margin-bottom: 10px;
     }
 
     ul {
+      display: flex;
+      font-size: 35px;
       list-style: none;
-      margin: 0;
+      margin: 5px;
       padding: 0;
       color: whitesmoke;
 
@@ -37,6 +40,7 @@ footer {
     }
 
     a {
+      margin: 15px;
       color: whitesmoke;
       text-decoration: none;
 

@@ -104,7 +104,6 @@ const ProductDetailPage = () => {
         <button className='add-to-cart-button' onClick={handleAddToCart}>
           Agregar a mi pedido (${precio * quantity})
         </button>
-        <p className='product-price'>Precio: {precio}</p>
       </div>
     </div>
   );
