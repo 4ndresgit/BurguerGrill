@@ -24,7 +24,7 @@ const NavBar = ({ userLoggedIn }) => {
                   <CartWidget />
                 </Link>
               ) : (
-                <Link to='/signin'>Login</Link>
+                <Link to='/signin' id='login'>Login</Link>
               )}
             </li>
           </ul>

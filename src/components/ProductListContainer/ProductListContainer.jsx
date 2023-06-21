@@ -1,7 +1,6 @@
 import './ProductListContainer.scss';
 import React, { useState, useEffect } from 'react';
 import ProductService from '../ProductService/ProductService';
-
 import ProductCard from '../ProductCard/ProductCard';
 
 function ProductListContainer() {
