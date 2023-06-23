@@ -1,10 +1,14 @@
 import React from 'react';
+import './NotFoundPage.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+
+
 
 function NotFoundPage() {
   return (
-    <div>
-      <h1>404 - Page Not Found</h1>
-      <p>The requested page could not be found.</p>
+    <div className='nfp-container'>
+      <h1 className='error-404'><FontAwesomeIcon icon={faExclamationCircle} /> 404 - Page Not Found</h1>
     </div>
   );
 }
