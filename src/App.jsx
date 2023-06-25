@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SignInForm from './components/SignInForm/SignInForm';
 import ProductListContainer from './components/ProductListContainer/ProductListContainer';
 import ProductDetailPage from './components/ProductDetailPage/ProductDetailPage';
+import CartPage from './components/CartPage/CartPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/products' element={<ProductListContainer />} />
           <Route path='/products/:productId' element={<ProductDetailPage />} />
           <Route path='*' element={<NotFoundPage />} />
+          <Route path='/cart' element={<CartPage />} />
         </Routes>
         <Footer />
       </div>

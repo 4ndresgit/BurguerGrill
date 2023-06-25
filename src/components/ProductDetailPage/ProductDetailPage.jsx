@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import productData from '../../product.json';
 import './ProductDetailPage.scss';
 
@@ -101,9 +101,9 @@ const ProductDetailPage = () => {
           <span>{quantity}</span>
           <button onClick={() => handleQuantityChange(1)}>+</button>
         </div>
-        <button className='add-to-cart-button' onClick={handleAddToCart}>
+        <Link to='/cart' className='add-to-cart-button' onClick={handleAddToCart}>
           Agregar a mi pedido (${precio * quantity})
-        </button>
+        </Link>
       </div>
     </div>
   );
