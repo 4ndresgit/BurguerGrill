@@ -1,15 +1,18 @@
-$header-bg-color: #f9a03f;
+@import 'typeface-montserrat';
+
 $header-text-color: #fff;
 $header-padding: 20px;
 
 .header {
-  background-color: $header-bg-color;
+  background: linear-gradient(to right, #e6a03f, #d6a03f);
   color: $header-text-color;
   padding: $header-padding;
   height: 250px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  font-family: Montserrat, Sans-serif;
+
 
   &__nav {
     ul {

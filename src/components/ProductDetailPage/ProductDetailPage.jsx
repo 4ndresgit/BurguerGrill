@@ -28,14 +28,24 @@ const ProductDetailPage = () => {
   };
 
   const handleAddToCart = () => {
-    // Lógica para agregar el producto al carrito
-    console.log(`Producto: ${product.nombre}`);
-    console.log(`Valor: ${product.precio * quantity}`);
-    console.log(`Opciones: ${selectedOptions.join(', ')}`);
+    if (product) {
+      setCartItems((prevCartItems) => {
+        const existingItem = prevCartItems.find(
+          (item) => item.id === product.id
+        );
+
+        if (existingItem) {
+          existingItem.quantity += quantity;
+          return [...prevCartItems];
+        } else {
+          const newItem = { ...product, quantity };
+          return [...prevCartItems, newItem];
+        }
+      });
+    }
   };
 
   const getProductById = (id) => {
-    // Simulación de la obtención del producto por ID desde el backend
     return productData.find((p) => p.id.toString() === id);
   };
 
@@ -47,7 +57,7 @@ const ProductDetailPage = () => {
   }, [productId]);
 
   if (!product) {
-    return null; // Otra acción a tomar si el producto no está definido
+    return null;
   }
 
   const { nombre, descripcion, imagen, precio } = product;
@@ -61,49 +71,24 @@ const ProductDetailPage = () => {
       <div className='product-info'>
         <h2 className='product-name'>{nombre}</h2>
         <p className='product-description'>{descripcion}</p>
-        <div className='options'>
-          <label>
-            <input
-              type='checkbox'
-              checked={selectedOptions.includes('sin aderezos')}
-              onChange={() => handleOptionChange('sin aderezos')}
-            />
-            Sin aderezos
-          </label>
-          <label>
-            <input
-              type='checkbox'
-              checked={selectedOptions.includes('sin cebolla')}
-              onChange={() => handleOptionChange('sin cebolla')}
-            />
-            Sin cebolla
-          </label>
-          <label>
-            <input
-              type='checkbox'
-              checked={selectedOptions.includes('sin cheddar')}
-              onChange={() => handleOptionChange('sin cheddar')}
-            />
-            Sin cheddar
-          </label>
-          <label>
-            <input
-              type='checkbox'
-              checked={selectedOptions.includes('sin bacon')}
-              onChange={() => handleOptionChange('sin bacon')}
-            />
-            Sin bacon
-          </label>
-        </div>
+        <div className='options'>{/* ... */}</div>
         <div className='quantity'>
           <h3>Cantidad:</h3>
-          <button onClick={() => handleQuantityChange(-1)}>-</button>
+          <button
+            className={`decrease-button${quantity === 1 ? ' disabled' : ''}`}
+            onClick={() => handleQuantityChange(-1)}
+          >
+            -
+          </button>
           <span>{quantity}</span>
-          <button onClick={() => handleQuantityChange(1)}>+</button>
+          <button
+            className='increase-button'
+            onClick={() => handleQuantityChange(1)}
+          >
+            +
+          </button>
         </div>
-        <Link to='/cart' className='add-to-cart-button' onClick={handleAddToCart}>
-          Agregar a mi pedido (${precio * quantity})
-        </Link>
+        {/* ... */}
       </div>
     </div>
   );

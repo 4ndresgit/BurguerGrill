@@ -1,20 +1,16 @@
-
 .product-list-container {
-  margin: 20px;
+  width: auto;
+  margin: 20px 40px;
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
 
-@media (min-width: 768px) {
-  .product-list-container {
-    margin: 0 -10px;
-  }
-
-  .product-card {
-    width: calc(33.33% - 20px);
-    margin: 15px 30px;
+  @media (max-width: 767px) {
+    max-width: 100%;
   }
 }
+
+
 
 

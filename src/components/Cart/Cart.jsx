@@ -2,17 +2,12 @@
 
 import React, { useState } from 'react';
 import CartItem from '../CartItem/CartItem';
-import productData from '../../product.json'
-import './Cart.scss' 
+import productData from '../../product.json';
+import './Cart.scss';
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState(
-    productData.map((product) => ({
-        ...product,
-        quantity: 0,
-    })));
+  const [cartItems, setCartItems] = useState([]);
 
-  // Aumentar productos del carrito
   const increaseQuantity = (productId) => {
     const updatedCartItems = cartItems.map((item) => {
       if (item.id === productId) {
@@ -23,7 +18,6 @@ const Cart = () => {
     setCartItems(updatedCartItems);
   };
 
-  // restar productos del carrito
   const decreaseQuantity = (productId) => {
     const updatedCartItems = cartItems.map((item) => {
       if (item.id === productId && item.quantity > 1) {
@@ -34,13 +28,11 @@ const Cart = () => {
     setCartItems(updatedCartItems);
   };
 
-  // eliminar del carrito
   const removeProduct = (productId) => {
     const updatedCartItems = cartItems.filter((item) => item.id !== productId);
     setCartItems(updatedCartItems);
   };
 
-  // calcular el subtotal del carrito
   const calculateSubtotal = () => {
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
@@ -48,12 +40,9 @@ const Cart = () => {
     );
   };
 
-  // calcular el total con impuestos, envío, etc.
   const calculateTotal = () => {
-    // total incluyendo impuestos, envío, etc.
-    
     const subtotal = calculateSubtotal();
-    const taxRate = 0.1; // 21% de impuestos
+    const taxRate = 0.1;
     const shippingCost = 5;
     return subtotal + subtotal * taxRate + shippingCost;
   };
@@ -86,3 +75,4 @@ const Cart = () => {
 };
 
 export default Cart;
+

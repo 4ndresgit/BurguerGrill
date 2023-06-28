@@ -12,6 +12,9 @@ import ProductDetailPage from './components/ProductDetailPage/ProductDetailPage'
 import CartPage from './components/CartPage/CartPage';
 
 function App() {
+
+  
+
   return (
     <Router>
       <div className='App'>

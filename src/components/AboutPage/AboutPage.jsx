@@ -6,7 +6,7 @@ function AboutPage() {
   return (
     <div className='about-container'>
       <img src={burguerImage} alt="Fondo de trabajo" />
-      <h1 className='about-title'>About Page</h1>
+      <h1 className='about-title'></h1>
       <p>
         ¡Bienvenido a Burguer Grill Company! En Burguer Grill Company, nuestra
         pasión es crear las hamburguesas más deliciosas y sabrosas que hayas

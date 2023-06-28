@@ -8,9 +8,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  font-family: Montserrat, Sans-serif;
+
 
   .footer-section {
-    width: 30%;
+    width: auto;
 
     h3 {
       color: $footer-font;
@@ -22,7 +24,7 @@ footer {
     p {
       color: $footer-font;
       font-size: 1.4rem;
-      margin-bottom: 10px;
+      margin: 0px;
     }
 
     ul {
