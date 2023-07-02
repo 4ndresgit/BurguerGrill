@@ -10,15 +10,15 @@ import SignInForm from './components/SignInForm/SignInForm';
 import ProductListContainer from './components/ProductListContainer/ProductListContainer';
 import ProductDetailPage from './components/ProductDetailPage/ProductDetailPage';
 import CartPage from './components/CartPage/CartPage';
-import { CartProvider } from './context/CartContext';
+import { CartProvider } from './Context/CartContext';
 
 function App() {
 
   return (
-    <CartProvider>
-
+    
     <Router>
       <div className='App'>
+        <CartProvider>
         <NavBar />
         <Routes>
           <Route path='/' element={<HomePage />} />
@@ -30,11 +30,10 @@ function App() {
           <Route path='/cart' element={<CartPage />} />
         </Routes>
         <Footer />
+        </CartProvider>
+        
       </div>
-      
     </Router>
-    </CartProvider>
-
   );
 }
 

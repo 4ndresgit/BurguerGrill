@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
 import Cart from '../Cart/Cart';
-
+import { CartContext } from '../../Context/CartContext/';
 
 const CartPage = () => {
-  const [cartItems, setCartItems] = useState([]); 
+  const { cartItems } = useContext(CartContext); 
 
   return (
     <div>

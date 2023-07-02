@@ -226,104 +226,97 @@
   },
   {
     "id": 33,
-    "nombre": "Pepsi Regular",
-    "descripcion": "Pepsi Regular 354 ml",
-    "precio": 400,
-    "imagen": "../public/img/drinks/pepsi.png"
-  },
-  {
-    "id": 34,
     "nombre": "Seven Up Regular",
     "descripcion": "Seven Up Regular 354 ml",
     "precio": 400,
     "imagen": "../public/img/drinks/sevenUp.png"
   },
   {
-    "id": 35,
+    "id": 34,
     "nombre": "Seven Up Free",
     "descripcion": "Seven Up Free 354 ml",
     "precio": 400,
     "imagen": "../public/img/drinks/sevenUpFree.png"
   },
   {
-    "id": 36,
+    "id": 35,
     "nombre": "Agua Mineral Sin Gas",
     "descripcion": "Agua Mineral Sin Gas Eco de Los Andes 500 cc",
     "precio": 400,
     "imagen": "../public/img/drinks/agua.png"
   },
   {
-    "id": 37,
+    "id": 36,
     "nombre": "Patagonia 24.7",
     "descripcion": "Cerveza Patagonia 24.7 410 ml",
     "precio": 600,
     "imagen": "../public/img/drinks/patagonia24.png"
   },
   {
-    "id": 38,
+    "id": 37,
     "nombre": "Patagonia Bohemian",
     "descripcion": "Cerveza Patagonia Bohemian 410 ml",
     "precio": 600,
     "imagen": "../public/img/drinks/patagoniaBohemian.png"
   },
   {
-    "id": 39,
+    "id": 38,
     "nombre": "Patagonia Amber Lager",
     "descripcion": "Cerveza Patagonia Amber Lager 410 ml",
     "precio": 600,
     "imagen": "../public/img/drinks/patagoniaAmber.png"
   },
   {
-    "id": 40,
+    "id": 39,
     "nombre": "Patagonia Sol Citra",
     "descripcion": "Cerveza Patagonia Sol Citra 410 ml",
     "precio": 600,
     "imagen": "../public/img/drinks/patagoniaSol.png"
   },
   {
-    "id": 41,
+    "id": 40,
     "nombre": "BBQ Sauce",
     "descripcion": "Salsa Barbacoa",
     "precio": 200,
     "imagen": "../public/img/sauces/bbq.jpeg"
   },
   {
-    "id": 42,
+    "id": 41,
     "nombre": "Burguer Grill Sauce",
     "descripcion": "Salsa de la casa",
     "precio": 200,
     "imagen": "../public/img/sauces/grill.jpeg"
   },
   {
-    "id": 43,
+    "id": 42,
     "nombre": "Spicy Sauce",
     "descripcion": "Salsa ketchup picante",
     "precio": 200,
     "imagen": "../public/img/sauces/spicy.jpeg"
   },
   {
-    "id": 44,
+    "id": 43,
     "nombre": "Relish Sauce",
     "descripcion": "Salsa condimento",
     "precio": 200,
     "imagen": "../public/img/sauces/relish.jpeg"
   },
   {
-    "id": 45,
+    "id": 44,
     "nombre": "Ali Oli Sauce",
     "descripcion": "Salsa ajo",
     "precio": 200,
     "imagen": "../public/img/sauces/aliOli.jpeg"
   },
   {
-    "id": 46,
+    "id": 45,
     "nombre": "Ali Oli Smoked Sauce",
     "descripcion": "Salsa Ajo Ahumado",
     "precio": 200,
     "imagen": "../public/img/sauces/aliOliSmoked.jpeg"
   },
   {
-    "id": 47,
+    "id": 46,
     "nombre": "Ali Oli Spicy Sauce",
     "descripcion": "Salsa Ajo con Jalapeño",
     "precio": 200,
