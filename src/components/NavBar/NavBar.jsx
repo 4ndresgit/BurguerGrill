@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import './NavBar.scss';
 import logo from '../../assets/images/burguer.svg';
 import CartWidget from '../CartWidget/CartWidget';
-
+import { useCart } from '../../Context/CartContext';
 
 const NavBar = ({ userLoggedIn }) => {
+  const { Cart } = useCart()
   return (
     <header className='header'>
       <div className='header__container'>
