@@ -1,14 +1,12 @@
 /* voy a poner formulario de inicio de session con email, contraseña y boton de inicio de session*/
 import {useState} from 'react';
 import { useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
 import './SignInForm.scss'
 
 
 
 const SignInForm = () => {
 
-  const {login} = useContext(AuthContext)
 
   const [values, setValues] = useState({
     email: '',

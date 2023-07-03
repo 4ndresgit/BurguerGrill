@@ -5,13 +5,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   input {
-    height: 50px;
+    height: 40px;
     width: 300px;
     border-radius: 10px;
-  }
-  button {
-    color: whitesmoke;
   }
 }
