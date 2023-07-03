@@ -5,322 +5,378 @@
     "nombre": "Burguer Grill",
     "descripcion": "Medallon x1 Cheddar x2 Bacon Cebolla Crispy Aderezo Burguer Grill",
     "precio": 2500,
-    "imagen": "../public/img/burguer/burguerGrillSimple.jpg"
+    "imagen": "/img/burguer/burguerGrillSimple.jpg",
+    "categoria": "burgers"
   },
   {
     "id": 2,
     "nombre": "Burguer Grill Doble",
     "descripcion": "Medallon x2 Cheddar x4 Bacon Cebolla Crispy Aderezo Burguer Grill",
     "precio": 2800,
-    "imagen": "../public/img/burguer/burguerGrillDoble.jpeg"
+    "imagen": "/img/burguer/burguerGrillDoble.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 3,
     "nombre": "Sweet Onion",
     "descripcion": "Medallon x1 Cheddar x2 Bacon Cebolla Caramelizada",
     "precio": 2500,
-    "imagen": "../public/img/burguer/sweetOnionSimple.jpeg"
+    "imagen": "/img/burguer/sweetOnionSimple.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 4,
     "nombre": "Sweet Onion Doble",
     "descripcion": "Medallon x2 Cheddar x2 Bacon Cebolla Caramelizada",
     "precio": 2800,
-    "imagen": "../public/img/burguer/sweetOnionDoble.jpeg"
+    "imagen": "/img/burguer/sweetOnionDoble.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 5,
     "nombre": "Cheese Burguer",
     "descripcion": "Medallon x1 Cheddar x2",
     "precio": 2000,
-    "imagen": "../public/img/burguer/cheeseBurguerSimple.jpeg"
+    "imagen": "/img/burguer/cheeseBurguerSimple.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 6,
     "nombre": "Cheese Burguer Doble",
     "descripcion": "Medallon x2 Cheddar x4",
     "precio": 2500,
-    "imagen": "../public/img/burguer/cheeseBurguerDoble.jpeg"
+    "imagen": "/img/burguer/cheeseBurguerDoble.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 7,
     "nombre": "Cheese Burguer Triple",
     "descripcion": "Medallon x3 Cheddar x6",
     "precio": 2900,
-    "imagen": "../public/img/burguer/cheeseBurguerTriple.jpeg"
+    "imagen": "/img/burguer/cheeseBurguerTriple.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 8,
     "nombre": "American Burguer",
     "descripcion": "Medallon x1 Cheddar x2 Tomate Lechuga Cebolla Pickles",
     "precio": 2300,
-    "imagen": "../public/img/burguer/americanSimple.jpeg"
+    "imagen": "/img/burguer/americanSimple.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 9,
     "nombre": "American Burguer Doble",
     "descripcion": "Medallon x2 Cheddar x4 Tomate Lechuga Cebolla Pickles",
     "precio": 2800,
-    "imagen": "../public/img/burguer/americanSimple.jpeg"
+    "imagen": "/img/burguer/americanSimple.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 10,
     "nombre": "Onion",
     "descripcion": "Medallon x2 Cheddar x4 Cebolla Grilled",
     "precio": 2500,
-    "imagen": "../public/img/burguer/onion.jpeg"
+    "imagen": "/img/burguer/onion.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 11,
     "nombre": "Royal",
     "descripcion": "Medallon x1 Cheddar x2 Cebolla Ketchup Mostaza Pepinos",
     "precio": 2600,
-    "imagen": "../public/img/burguer/royalSimple.jpg"
+    "imagen": "/img/burguer/royalSimple.jpg",
+    "categoria": "burgers"
   },
   {
     "id": 12,
     "nombre": "Royal Doble",
     "descripcion": "Medallon x2 Cheddar x4 Cebolla Ketchup Mostaza Pepinos",
     "precio": 2800,
-    "imagen": "../public/img/burguer/royalDoble.jpeg"
+    "imagen": "/img/burguer/royalDoble.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 13,
     "nombre": "California",
     "descripcion": "Medallon x1 Cheddar x2 Lechuga Tomate Cebolla California Sauce",
     "precio": 2300,
-    "imagen": "../public/img/burguer/californiaSimple.jpeg"
+    "imagen": "/img/burguer/californiaSimple.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 14,
     "nombre": "California Doble",
     "descripcion": "Medallon x2 Cheddar x4 Lechuga Tomate Cebolla California Sauce",
     "precio": 2600,
-    "imagen": "../public/img/burguer/californiaDoble.jpeg"
+    "imagen": "/img/burguer/californiaDoble.jpeg",
+    "categoria": "burgers"
   },
   {
     "id": 15,
     "nombre": "Bacon Smoked",
     "descripcion": "Medallon x1 Cheddar x2 Bacon Ahumado x4 Relish Sauce",
     "precio": 2500,
-    "imagen": "../public/img/burguer/baconSmokedSimple.jpg"
+    "imagen": "/img/burguer/baconSmokedSimple.jpg",
+    "categoria": "burgers"
+
   },
   {
     "id": 16,
     "nombre": "Bacon Smoked Doble",
     "descripcion": "Medallon x2 Cheddar x4 Bacon Ahumado x4 Relish Sauce",
     "precio": 2800,
-    "imagen": "../public/img/burguer/baconSmokedDoble.jpeg"
+    "imagen": "/img/burguer/baconSmokedDoble.jpeg",
+    "categoria": "burgers"
+
   },
   {
     "id": 17,
     "nombre": "Sweet & Spicy",
     "descripcion": "Medallon x1 Cheddar x2 Mermelada de Tomate Pepino Alioli Jalapeño",
     "precio": 2200,
-    "imagen": "../public/img/burguer/sweet&spicy.jpg"
+    "imagen": "/img/burguer/sweet&spicy.jpg",
+    "categoria": "burgers"
+
   },
   {
     "id": 18,
     "nombre": "Sweet & Spicy Doble",
     "descripcion": "Medallon x2 Cheddar x4 Mermelada de Tomate Pepino Alioli Jalapeño",
     "precio": 2200,
-    "imagen": "../public/img/burguer/sweet&spicyDoble.jpeg"
+    "imagen": "/img/burguer/sweet&spicyDoble.jpeg",
+    "categoria": "burgers"
+
   },
   {
     "id": 19,
     "nombre": "Pesto",
     "descripcion": "Medallon x1 Cheddar x2 Tomate Pesto Alioli",
     "precio": 2200,
-    "imagen": "../public/img/burguer/pestoSimple.jpg"
+    "imagen": "/img/burguer/pestoSimple.jpg",
+    "categoria": "burgers"
+
   },
   {
     "id": 20,
     "nombre": "Pesto Doble",
     "descripcion": "Medallon x2 Cheddar x4 Tomate Pesto Alioli",
     "precio": 2500,
-    "imagen": "../public/img/burguer/pestoDoble.jpeg"
+    "imagen": "/img/burguer/pestoDoble.jpeg",
+    "categoria": "burgers"
+
   },
   {
     "id": 21,
     "nombre": "Bacon",
     "descripcion": "Medallon x1 Cheddar x2 Bacon Pickles Bbq Sauce",
     "precio": 2500,
-    "imagen": "../public/img/burguer/baconSimple.jpeg"
+    "imagen": "/img/burguer/baconSimple.jpeg",
+    "categoria": "burgers"
+
   },
 {
     "id": 22,
     "nombre": "Bacon Doble",
     "descripcion": "Medallon x2 Cheddar x4 Bacon Pickles Bbq Sauce",
     "precio": 2800,
-    "imagen": "../public/img/burguer/baconDoble.jpeg"
+    "imagen": "/img/burguer/baconDoble.jpeg",
+    "categoria": "burgers"
+
   },
   {
     "id": 23,
     "nombre": "Not Burguer Grill",
     "descripcion": "Medallon Veggie x1 Cheddar x2 Pickles Cebolla Tomate Lechuga Mayonesa Ketchup",
     "precio": 2200,
-    "imagen": "../public/img/burguer/notBurguer.jpeg"
+    "imagen": "/img/burguer/notBurguer.jpeg",
+    "categoria": "burgers"
+
   },
   {
     "id": 24,
     "nombre": "Papas Fritas",
     "descripcion": "Papas Fritas",
     "precio": 1090,
-    "imagen": "../public/img/starters/papasFritas.jpeg"
+    "imagen": "/img/starters/papasFritas.jpeg",
+    "categoria": "starter"
+
   },
   {
     "id": 25,
     "nombre": "Papas Cheddar y Verdeo",
     "descripcion": "Papas Fritas Cheddar Verdeo",
     "precio": 1390,
-    "imagen": "../public/img/starters/papasCheddarVerdeo.jpeg"
-  },
+    "imagen": "/img/starters/papasCheddarVerdeo.jpeg",
+    "categoria": "starter"
+      },
   {
     "id": 26,
     "nombre": "Papas Cheddar Verdeo Bacon",
     "descripcion": "Papas Fritas Cheddar Verdeo Bacon",
     "precio": 1590,
-    "imagen": "../public/img/starters/papasCheddarBacon.jpeg"
+    "imagen": "/img/starters/papasCheddarBacon.jpeg",
+    "categoria": "starter"
   },
   {
     "id": 27,
     "nombre": "Aros de Cebolla + BBQ",
     "descripcion": "300 Grs de Aros de Cebolla + Salsa",
     "precio": 1690,
-    "imagen": "../public/img/starters/arosCebolla.jpeg"
+    "imagen": "/img/starters/arosCebolla.jpeg",
+    "categoria": "starter"
   },
   {
     "id": 28,
     "nombre": "Bastones de Mozzarella",
     "descripcion": "12 Bastones de Muzzarella + Salsa",
     "precio": 1690,
-    "imagen": "../public/img/starters/bastonesMozzarella.jpeg"
+    "imagen": "/img/starters/bastonesMozzarella.jpeg",
+    "categoria": "starter"
   },
   {
     "id": 29,
     "nombre": "Nuggets x 10",
     "descripcion": "10 Nuggets de pollo + Salsa",
     "precio": 1190,
-    "imagen": "../public/img/starters/chickenNuggetsx10.jpeg"
+    "imagen": "/img/starters/chickenNuggetsx10.jpeg",
+    "categoria": "starter"
   },
    {
     "id": 30,
     "nombre": "Nuggets x 20",
     "descripcion": "20 Nuggets de pollo + Salsa",
     "precio": 1590,
-    "imagen": "../public/img/starters/chickenNuggetsx20.jpeg"
+    "imagen": "/img/starters/chickenNuggetsx20.jpeg",
+    "categoria": "starter"
   },
   {
     "id": 31,
     "nombre": "Pepsi Regular 354 ml",
     "descripcion": "Pepsi Regular 354 ml",
     "precio": 400,
-    "imagen": "../public/img/drinks/pepsi.png"
+    "imagen": "/img/drinks/pepsi.png",
+    "categoria": "drinks"
   },
   {
     "id": 32,
     "nombre": "Pepsi Black",
     "descripcion": "Pepsi Black 354 ml",
     "precio": 400,
-    "imagen": "../public/img/drinks/pepsiBlack.png"
+    "imagen": "/img/drinks/pepsiBlack.png",
+    "categoria": "drinks"
   },
   {
     "id": 33,
     "nombre": "Seven Up Regular",
     "descripcion": "Seven Up Regular 354 ml",
     "precio": 400,
-    "imagen": "../public/img/drinks/sevenUp.png"
+    "imagen": "/img/drinks/sevenUp.png",
+    "categoria": "drinks"
   },
   {
     "id": 34,
     "nombre": "Seven Up Free",
     "descripcion": "Seven Up Free 354 ml",
     "precio": 400,
-    "imagen": "../public/img/drinks/sevenUpFree.png"
+    "imagen": "/img/drinks/sevenUpFree.png",
+    "categoria": "drinks"
   },
   {
     "id": 35,
     "nombre": "Agua Mineral Sin Gas",
     "descripcion": "Agua Mineral Sin Gas Eco de Los Andes 500 cc",
     "precio": 400,
-    "imagen": "../public/img/drinks/agua.png"
+    "imagen": "/img/drinks/agua.png",
+    "categoria": "drinks"
   },
   {
     "id": 36,
     "nombre": "Patagonia 24.7",
     "descripcion": "Cerveza Patagonia 24.7 410 ml",
     "precio": 600,
-    "imagen": "../public/img/drinks/patagonia24.png"
+    "imagen": "/img/drinks/patagonia24.png",
+    "categoria": "drinks"
   },
   {
     "id": 37,
     "nombre": "Patagonia Bohemian",
     "descripcion": "Cerveza Patagonia Bohemian 410 ml",
     "precio": 600,
-    "imagen": "../public/img/drinks/patagoniaBohemian.png"
+    "imagen": "/img/drinks/patagoniaBohemian.png",
+    "categoria": "drinks"
   },
   {
     "id": 38,
     "nombre": "Patagonia Amber Lager",
     "descripcion": "Cerveza Patagonia Amber Lager 410 ml",
     "precio": 600,
-    "imagen": "../public/img/drinks/patagoniaAmber.png"
+    "imagen": "/img/drinks/patagoniaAmber.png",
+    "categoria": "drinks"
   },
   {
     "id": 39,
     "nombre": "Patagonia Sol Citra",
     "descripcion": "Cerveza Patagonia Sol Citra 410 ml",
     "precio": 600,
-    "imagen": "../public/img/drinks/patagoniaSol.png"
+    "imagen": "/img/drinks/patagoniaSol.png",
+    "categoria": "drinks"
   },
   {
     "id": 40,
     "nombre": "BBQ Sauce",
     "descripcion": "Salsa Barbacoa",
     "precio": 200,
-    "imagen": "../public/img/sauces/bbq.jpeg"
+    "imagen": "/img/sauces/bbq.jpeg",
+    "categoria": "sauces"
   },
   {
     "id": 41,
     "nombre": "Burguer Grill Sauce",
     "descripcion": "Salsa de la casa",
     "precio": 200,
-    "imagen": "../public/img/sauces/grill.jpeg"
+    "imagen": "/img/sauces/grill.jpeg",
+    "categoria": "sauces"
   },
   {
     "id": 42,
     "nombre": "Spicy Sauce",
     "descripcion": "Salsa ketchup picante",
     "precio": 200,
-    "imagen": "../public/img/sauces/spicy.jpeg"
+    "imagen": "/img/sauces/spicy.jpeg",
+    "categoria": "sauces"
   },
   {
     "id": 43,
     "nombre": "Relish Sauce",
     "descripcion": "Salsa condimento",
     "precio": 200,
-    "imagen": "../public/img/sauces/relish.jpeg"
+    "imagen": "/img/sauces/relish.jpeg",
+    "categoria": "sauces"
   },
   {
     "id": 44,
     "nombre": "Ali Oli Sauce",
     "descripcion": "Salsa ajo",
     "precio": 200,
-    "imagen": "../public/img/sauces/aliOli.jpeg"
+    "imagen": "/img/sauces/aliOli.jpeg",
+    "categoria": "sauces"
   },
   {
     "id": 45,
     "nombre": "Ali Oli Smoked Sauce",
     "descripcion": "Salsa Ajo Ahumado",
     "precio": 200,
-    "imagen": "../public/img/sauces/aliOliSmoked.jpeg"
+    "imagen": "/img/sauces/aliOliSmoked.jpeg",
+    "categoria": "sauces"
   },
   {
     "id": 46,
     "nombre": "Ali Oli Spicy Sauce",
     "descripcion": "Salsa Ajo con Jalapeño",
     "precio": 200,
-    "imagen": "../public/img/sauces/aliOliJalapeño.jpeg"
+    "imagen": "/img/sauces/aliOliJalapeño.jpeg",
+    "categoria": "sauces"
   }
 ]
 

@@ -24,7 +24,8 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/signin' element={<SignInForm />} />
-          <Route path='/products' element={<ProductListContainer />} />
+          <Route path='/category/:categoryId' element={<ProductListContainer />} />
+
           <Route path='/products/:productId' element={<ProductDetailPage />} />
           <Route path='*' element={<NotFoundPage />} />
           <Route path='/cart' element={<CartPage />} />
