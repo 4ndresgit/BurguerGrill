@@ -10,14 +10,12 @@ import SignInForm from "./components/SignInForm/SignInForm";
 import ProductListContainer from "./components/ProductListContainer/ProductListContainer";
 import ProductDetailPage from "./components/ProductDetailPage/ProductDetailPage";
 import CartPage from "./components/CartPage/CartPage";
-import { CartContext } from "./Context/CartContext";
-import { useState } from "react";
+import { CartProvider } from "./Context/CartContext";
 
 function App() {
-  const [cart, setCart] = useState([]);
 
   return (
-    <CartContext.Provider value={{ cart, setCart}}>
+    <CartProvider>
       <Router>
         <div className="App">
           <NavBar />
@@ -40,7 +38,7 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </CartContext.Provider>
+    </CartProvider>
   );
 }
 
