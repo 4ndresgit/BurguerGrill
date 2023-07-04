@@ -6,32 +6,10 @@ import { CartContext } from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ProductDetailPage = () => {
-  const { cart, setCart } = useContext(CartContext);
+  const { cart, setCart, handleAddToCart } = useContext(CartContext);
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-
-  const handleAddToCart = () => {
-    console.log("Handle Add to Cart");
-  
-    if (product) {
-      const existingItem = cart.find((item) => item.id === product.id);
-  
-      console.log("Product:", product);
-      console.log("Existing Item:", existingItem);
-  
-      if (existingItem) {
-        existingItem.quantity += quantity;
-        console.log("Updated Cart:", cart);
-        setCart([...cart]);
-      } else {
-        const newItem = { ...product, quantity };
-        console.log("New Item:", newItem);
-        setCart([...cart, newItem]);
-      }
-    }
-  };
-  
 
   const getProductById = (id) => {
     return productData.find((p) => p.id.toString() === id);
