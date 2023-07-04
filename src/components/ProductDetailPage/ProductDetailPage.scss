@@ -1,3 +1,9 @@
+
+.product-detail-container {
+display: flex;
+align-items: center;
+justify-content: center;
+}
 .product-detail {
   margin: 50px;
   position: relative;
@@ -20,8 +26,8 @@
   }
 
   .product-image {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     margin-bottom: 20px;
     border-radius: 50px;
   }
@@ -36,17 +42,9 @@
       margin-bottom: 10px;
     }
 
-    .options {
-      margin-bottom: 10px;
-
-      label {
-        display: block;
-        margin-bottom: 5px;
-
-        input[type='checkbox'] {
-          margin-right: 5px;
-        }
-      }
+    .product-price {
+      font-weight: 700;
+      float: right;
     }
 
     .quantity {
@@ -103,5 +101,5 @@
       margin-top: 10px;
     }
   }
+  
 }
-
