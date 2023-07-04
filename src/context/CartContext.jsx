@@ -16,6 +16,8 @@ export const CartProvider = ({children}) => {
                 const newItem = { ...product, quantity };
                 setCart([...cart, newItem]);
             }
+            console.log("Producto agregado al carrito:", product);
+    console.log("Carrito actualizado:", cart);
         }
     };
 

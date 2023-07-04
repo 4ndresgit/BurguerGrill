@@ -20,6 +20,19 @@ const NavBar = ({ userLoggedIn }) => {
               <Link to="/about">Nosotros</Link>
             </li>
             <li>
+              {userLoggedIn ? (
+                <Link to="/cart">
+                  <CartWidget />{" "}
+                </Link>
+              ) : (
+                <Link to="/signin" id="login">
+                  Login
+                </Link>
+              )}
+            </li>
+            </ul>
+            <ul>
+              <li>
               <Link to="/category/burgers">Burgers</Link>
             </li>
             <li>
@@ -31,18 +44,8 @@ const NavBar = ({ userLoggedIn }) => {
             <li>
               <Link to="/category/sauces">Sauces</Link>
             </li>
-            <li>
-              {userLoggedIn ? (
-                <Link to="/cart">
-                  <CartWidget />{" "}
-                </Link>
-              ) : (
-                <Link to="/signin" id="login">
-                  Login
-                </Link>
-              )}
-            </li>
-          </ul>
+              </ul>
+            
         </nav>
       </div>
     </header>
