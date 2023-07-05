@@ -6,10 +6,11 @@ import { CartContext } from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ProductDetailPage = () => {
-  const { cart, setCart, handleAddToCart } = useContext(CartContext);
+  const {  handleAddToCart } = useContext(CartContext);
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [cartOpen, setCartOpen] = useState(false);
 
   const getProductById = (id) => {
     return productData.find((p) => p.id.toString() === id);
@@ -28,6 +29,16 @@ const ProductDetailPage = () => {
 
   const { nombre, descripcion, imagen, precio } = product;
 
+  const onAdd = (cantidad) => {
+    handleAddToCart(product, cantidad);
+    setCartOpen(true); // Abrir el carrito al agregar el producto
+  };
+
+  const handleCloseCart = () => {
+    setCartOpen(false); // Cerrar el carrito
+    history.goBack(); // Regresar a la página anterior
+  };
+
   return (
     <div className="product-detail-container">
       <div className="product-detail">
@@ -42,7 +53,7 @@ const ProductDetailPage = () => {
           <ItemCount
             quantity={quantity}
             setQuantity={setQuantity}
-            handleAddToCart={handleAddToCart}
+            handleAddToCart={onAdd}
           />
         </div>
       </div>

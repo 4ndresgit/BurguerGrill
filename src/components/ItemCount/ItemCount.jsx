@@ -1,5 +1,12 @@
 
+import { useNavigate } from "react-router-dom";
+
+
+
+
 const ItemCount = ({ quantity, setQuantity, handleAddToCart }) => {
+const navigate = useNavigate();
+
     const handleQuantityChange = (amount) => {
       const newQuantity = quantity + amount;
       if (newQuantity >= 1) {
@@ -20,7 +27,10 @@ const ItemCount = ({ quantity, setQuantity, handleAddToCart }) => {
         <button className="increase-button" onClick={() => handleQuantityChange(1)}>
           +
         </button>
-        <button className="add-to-cart-button" onClick={() => handleAddToCart(quantity)}>
+        <button className="add-to-cart-button" onClick={() => {
+  handleAddToCart(quantity);
+  navigate('/cart');
+}}>
           Agregar al pedido
         </button>
       </div>

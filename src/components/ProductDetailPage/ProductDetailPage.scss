@@ -13,7 +13,11 @@ justify-content: center;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   max-width: 60%;
+  transition: transform 0.3s ease-in-out;
 
+  &.cart-open {
+    transform: translateX(-100%); /* Desplaza el carrito hacia la izquierda al estar abierto */
+  }
   .close-button {
     position: absolute;
     top: 10px;
@@ -103,3 +107,7 @@ justify-content: center;
   }
   
 }
+
+
+
+
