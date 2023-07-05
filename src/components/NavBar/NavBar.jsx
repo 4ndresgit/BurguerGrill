@@ -4,51 +4,53 @@ import "./NavBar.scss";
 import logo from "../../assets/images/burguer.svg";
 import CartWidget from "../CartWidget/CartWidget";
 import { useCart } from "../../Context/CartContext";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 const NavBar = ({ userLoggedIn }) => {
-  const { Cart } = useCart();
   return (
-    <header className="header">
-      <div className="headercontainer">
+    <Navbar className="navbar">
+      <div className="navbar-container">
         <img src={logo} alt="logo" />
-        <nav className="headernav">
-          <ul>
-            <li>
-              <Link to="/">Take away</Link>
-            </li>
-            <li>
-              <Link to="/about">Nosotros</Link>
-            </li>
-            <li>
-              {userLoggedIn ? (
-                <Link to="/cart">
-                  <CartWidget />{" "}
-                </Link>
-              ) : (
-                <Link to="/signin" id="login">
-                  Login
-                </Link>
-              )}
-            </li>
-            </ul>
-            <ul>
-              <li>
-              <Link to="/category/burgers">Burgers</Link>
-            </li>
-            <li>
-              <Link to="/category/starter">Starters</Link>
-            </li>
-            <li>
-              <Link to="/category/drinks">Drinks</Link>
-            </li>
-            <li>
-              <Link to="/category/sauces">Sauces</Link>
-            </li>
-              </ul>
+        <div className="navbar-links">
+        <Link to="/" className="navbar-brand">
+          Take away
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+        <NavDropdown title="Categorías" id="basic-nav-dropdown">
+              <Link to="/category/burgers" className="dropdown-item">
+                Burgers
+              </Link>
+              <Link to="/category/starter" className="dropdown-item">
+                Starters
+              </Link>
+              <Link to="/category/drinks" className="dropdown-item">
+                Drinks
+              </Link>
+              <Link to="/category/sauces" className="dropdown-item">
+                Sauces
+              </Link>
+            </NavDropdown>
+          <Nav className="mr-auto">
+            <Link to="/about" className="nav-link">
+              Nosotros
+            </Link>
+            {userLoggedIn ? (
+              <Link to="/cart" className="nav-link">
+                Carrito
+              </Link>
+            ) : (
+              <Link to="/signin" className="nav-link">
+                Login
+              </Link>
+            )}
             
-        </nav>
+          </Nav>
+        </Navbar.Collapse>
+        </div>
+        
       </div>
-    </header>
+    </Navbar>
   );
 };
 
