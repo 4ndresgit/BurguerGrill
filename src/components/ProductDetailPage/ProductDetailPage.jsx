@@ -31,12 +31,12 @@ const ProductDetailPage = () => {
 
   const onAdd = (cantidad) => {
     handleAddToCart(product, cantidad);
-    setCartOpen(true); // Abrir el carrito al agregar el producto
+    setCartOpen(true); 
   };
 
   const handleCloseCart = () => {
-    setCartOpen(false); // Cerrar el carrito
-    history.goBack(); // Regresar a la página anterior
+    setCartOpen(false); 
+    history.goBack(); 
   };
 
   return (

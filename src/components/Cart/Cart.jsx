@@ -49,7 +49,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h2>Carrito de Compras</h2>
+      <h2>Pedidos</h2>
       {cartItems.length === 0 ? (
         <p>No hay productos en el carrito.</p>
       ) : (
