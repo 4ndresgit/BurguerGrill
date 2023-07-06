@@ -2,6 +2,14 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+
+  .remove-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
   
   .cart-item-image {
     flex: 0 0 100px;
@@ -11,6 +19,7 @@
       width: 100%;
       height: auto;
     }
+    
   }
   
   .cart-item-details {
@@ -26,13 +35,7 @@
         margin: 0;
       }
       
-      .remove-button {
-        background-color: transparent;
-        border: none;
-        color: red;
-        cursor: pointer;
-        font-size: 0.8rem;
-      }
+      
     }
     
     .cart-item-description {
