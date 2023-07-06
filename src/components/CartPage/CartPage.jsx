@@ -1,14 +1,20 @@
 import React, { useContext } from "react";
 import CartItem from "../CartItem/CartItem";
-import { useCart } from "../../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import { FaShoppingCart } from "react-icons/fa";
 import "./CartPage.scss";
 
 const CartPage = () => {
-  const { cart, handleRemoveFromCart } = useCart();
+  const { cart, handleRemoveFromCart } = useContext(CartContext);
 
-  const totalPrice = cart.reduce((total, product) => total + product.precio, 0);
+  const totalPrice = cart
+    ? cart.reduce((total, product) => total + product.precio, 0)
+    : 0;
 
+    const handleRemove = (productId) => {
+      handleRemoveFromCart(productId);
+    };
+  
   return (
     <div className="cart-page">
       <div className="title" style={{ display: "flex", alignItems: "center" }}>
@@ -25,7 +31,7 @@ const CartPage = () => {
             <CartItem
               key={product.id}
               product={product}
-              removeFromCart={handleRemoveFromCart}
+              removeFromCart={handleRemove}
             />
           ))}
           <div className="total-price">Total: ${totalPrice}</div>

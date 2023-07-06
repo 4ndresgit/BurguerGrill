@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CartItem = ({ product, removeFromCart }) => {
-  const { imagen, descripcion, precio } = product;
+  const { imagen, descripcion, precio, quantity } = product;
 
   const handleRemove = () => {
     removeFromCart(product.id);
@@ -12,7 +12,8 @@ const CartItem = ({ product, removeFromCart }) => {
       <img src={imagen} alt={descripcion} />
       <div className="item-details">
         <p>{descripcion}</p>
-        <p>${precio}</p>
+        <p>${precio} x {quantity} unidades</p>
+        <p>Total: ${precio*quantity}</p>
       </div>
       <button className="remove-button" onClick={handleRemove}>
         X
