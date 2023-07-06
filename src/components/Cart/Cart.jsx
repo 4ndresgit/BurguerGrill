@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import CartItem from '../CartItem/CartItem';
-import productData from '../../product.json';
 import './Cart.scss';
 
 const Cart = () => {

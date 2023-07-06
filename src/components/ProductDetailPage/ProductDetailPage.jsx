@@ -2,7 +2,7 @@ import "./ProductDetailPage.scss";
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import productData from "../../product.json";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ProductDetailPage = () => {

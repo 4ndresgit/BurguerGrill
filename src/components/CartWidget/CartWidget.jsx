@@ -10,8 +10,8 @@ function CartWidget() {
 
   return (
     <div>
-      <FontAwesomeIcon icon={faShoppingCart} size='lg' />
-      <Badge variant='primary'>{cartItemCount}</Badge>
+      <FontAwesomeIcon icon={faShoppingCart} size='xl' />
+      <Badge bg='light' text='dark'>{cartItemCount}</Badge>
     </div>
   );
 }

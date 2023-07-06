@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.scss";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../../assets/images/burguer.svg";
 import CartWidget from "../CartWidget/CartWidget";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "./NavBar.scss";
 
 const NavBar = ({ userLoggedIn }) => {
   return (
@@ -11,7 +11,7 @@ const NavBar = ({ userLoggedIn }) => {
       <div className="navbar-container">
         <img src={logo} alt="logo" />
         <div className="navbar-links">
-          <Link to="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand nav-link">
             Take away
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -34,15 +34,13 @@ const NavBar = ({ userLoggedIn }) => {
               <Link to="/about" className="nav-link">
                 Nosotros
               </Link>
-              
-                <Link to="/cart" className="nav-link">
-                  <CartWidget />
-                </Link>
-              
-                <Link to="/signin" className="nav-link">
-                  Login
-                </Link>
-              
+
+              <Link to="/signin" className="nav-link login">
+                Login
+              </Link>
+              <Link to="/cart" className="nav-link cart">
+                <CartWidget />
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </div>

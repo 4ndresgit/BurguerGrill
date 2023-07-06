@@ -1,28 +1,40 @@
-@import 'typeface-montserrat';
+@import "typeface-montserrat";
 
 .navbar {
   background: linear-gradient(to right, #e6a03f, #d6a03f);
-
-
-&-container {
-  margin: 0 auto;
-  width: auto;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  
-}
-
-&-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 20px;
-  
-}
-
-&-link {
   font-family: montserrat;
-}
+
+
+  &-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    a.nav-link {
+      color: #f2f2f2;
+      font-size: 20px;
+      margin: 20px; 
+      text-transform: uppercase;
+    }
+
+    .login {
+      border: solid 1px black;
+      border-radius: 15px;
+      padding: 10px;
+    }
+
+    .cart {
+      border-radius: 10px;
+      background-color: black;
+    }
+  }
 }
