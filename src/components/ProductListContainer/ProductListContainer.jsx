@@ -3,6 +3,8 @@ import ProductService from '../ProductService/ProductService';
 import ProductCard from '../ProductCard/ProductCard';
 import { useParams } from 'react-router-dom';
 import './ProductListContainer.scss'
+import { collection, getDocs} from 'firebase/firestore';
+import { db } from '../../Firebase/config';
 
 const ProductListContainer = () => {
   const { categoryId } = useParams();
@@ -10,33 +12,27 @@ const ProductListContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchProducts();
+    setLoading(true);
+
+    const productsRef = collection(db, 'productos')
+    getDocs(productsRef)
+      .then((resp) => {
+        const items =  resp.docs.map((doc) => doc.data())
+        setProducts(items)
+      })
+      .catch(e => console.log(e))
+      .finally(() => setLoading(false))
+
   }, [categoryId]);
 
-  const fetchProducts = async () => {
-    try {
-      let productsData;
-
-      if (categoryId) {
-        productsData = await ProductService.getProductsByCategory(categoryId);
-      } else {
-        productsData = await ProductService.getProducts();
-      }
-
-      setProducts(productsData);
-      setLoading(false);
-    } catch (error) {
-      console.error('Error al obtener los productos:', error);
-    }
-  };
 
   return (
     <div className='product-list-container'>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+        products.map((products) => (
+          <ProductCard key={products.id} product={products} />
         ))
       )}
     </div>
