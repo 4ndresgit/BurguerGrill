@@ -9,6 +9,7 @@ import { doc, getDoc } from "firebase/firestore";
 
 
 const ProductDetailPage = () => {
+  const { handleAddToCart } = useContext(CartContext);
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
