@@ -17,7 +17,9 @@ const ProductListContainer = () => {
     const productsRef = collection(db, 'productos')
     getDocs(productsRef)
       .then((resp) => {
-        const items =  resp.docs.map((doc) => doc.data())
+        const items =  resp.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() }
+        })
         setProducts(items)
       })
       .catch(e => console.log(e))

@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import CartItem from "../CartItem/CartItem";
 import { CartContext } from "../../context/CartContext";
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../Firebase/config';
+import CartItem from "../CartItem/CartItem";
 import { FaShoppingCart } from "react-icons/fa";
 import "./CartPage.scss";
 
 const CartPage = () => {
   const { cart, handleRemoveFromCart } = useContext(CartContext);
 
-  const totalPrice = cart
-    ? cart.reduce((total, product) => total + product.precio, 0)
-    : 0;
+  const totalPrice = cart.reduce((total, product) => total + product.precio, 0) 
 
     const handleRemove = (productId) => {
       handleRemoveFromCart(productId);

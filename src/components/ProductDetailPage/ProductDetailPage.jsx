@@ -1,26 +1,37 @@
 import "./ProductDetailPage.scss";
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useParams } from "react-router-dom";
-import productData from "../../product.json";
+import { useParams } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
+import { db } from "../../Firebase/config";
+import { doc, getDoc } from "firebase/firestore";
+
+
 
 const ProductDetailPage = () => {
-  const {  handleAddToCart } = useContext(CartContext);
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [cartOpen, setCartOpen] = useState(false);
 
-  const getProductById = (id) => {
-    return productData.find((p) => p.id.toString() === id);
-  };
+  
 
   useEffect(() => {
-    const product = getProductById(productId);
-    if (product) {
-      setProduct(product);
-    }
+    const fetchProduct = async () => {
+      try {
+        const docRef = doc(db, "productos", productId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setProduct(docSnap.data());
+        } else {
+          console.log("Product does not exist");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchProduct();
   }, [productId]);
 
   if (!product) {
