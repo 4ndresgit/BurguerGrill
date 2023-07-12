@@ -10,7 +10,7 @@ import SignInForm from "./components/SignInForm/SignInForm";
 import ProductListContainer from "./components/ProductListContainer/ProductListContainer";
 import ProductDetailPage from "./components/ProductDetailPage/ProductDetailPage";
 import CartPage from "./components/CartPage/CartPage";
-import { CartProvider } from "./Context/CartContext";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
 

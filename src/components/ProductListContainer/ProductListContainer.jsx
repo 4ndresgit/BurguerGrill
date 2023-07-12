@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ProductService from '../ProductService/ProductService';
 import ProductCard from '../ProductCard/ProductCard';
 import { useParams } from 'react-router-dom';
 import './ProductListContainer.scss'
