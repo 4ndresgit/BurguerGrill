@@ -1,39 +1,27 @@
 
 
-import React, { useState } from 'react';
+import React from 'react';
+import { useCart } from './context/CartContext';
 import CartItem from '../CartItem/CartItem';
 import './Cart.scss';
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
+  const { cart, handleAddToCart, handleRemoveFromCart } = useCart();
 
   const increaseQuantity = (productId) => {
-    const updatedCartItems = cartItems.map((item) => {
-      if (item.id === productId) {
-        return { ...item, quantity: item.quantity + 1 };
-      }
-      return item;
-    });
-    setCartItems(updatedCartItems);
+    handleAddToCart(productId, 1);
   };
 
   const decreaseQuantity = (productId) => {
-    const updatedCartItems = cartItems.map((item) => {
-      if (item.id === productId && item.quantity > 1) {
-        return { ...item, quantity: item.quantity - 1 };
-      }
-      return item;
-    });
-    setCartItems(updatedCartItems);
+    handleAddToCart(productId, -1);
   };
 
   const removeProduct = (productId) => {
-    const updatedCartItems = cartItems.filter((item) => item.id !== productId);
-    setCartItems(updatedCartItems);
+    handleRemoveFromCart(productId);
   };
 
   const calculateSubtotal = () => {
-    return cartItems.reduce(
+    return cart.reduce(
       (total, item) => total + item.price * item.quantity,
       0
     );
@@ -49,11 +37,11 @@ const Cart = () => {
   return (
     <div>
       <h2>Pedidos</h2>
-      {cartItems.length === 0 ? (
+      {cart.length === 0 ? (
         <p>No hay productos en el carrito.</p>
       ) : (
         <>
-          {cartItems.map((item) => (
+          {cart.map((item) => (
             <CartItem
               key={item.id}
               item={item}
@@ -74,4 +62,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
