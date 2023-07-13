@@ -23,7 +23,7 @@ const ProductDetailPage = () => {
         const docRef = doc(db, "productos", productId);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
-          setProduct(docSnap.data());
+          setProduct({id:docSnap.id, ...docSnap.data()});
         } else {
           console.log("Product does not exist");
         }
