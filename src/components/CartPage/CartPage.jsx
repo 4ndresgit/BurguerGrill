@@ -24,9 +24,9 @@ const CartPage = () => {
         </h1>
       </div>
       {cart.length === 0 ? (
-        <p>No hay productos en el carrito.</p>
+        <p>¡No tenés productos en el carrito!</p>
       ) : (
-        <>
+        <div className="cart-product">
           {cart.map((product) => (
             <CartItem
               key={product.id}
@@ -35,7 +35,7 @@ const CartPage = () => {
             />
           ))}
           <div className="total-price">Total: ${totalPrice}</div>
-        </>
+        </div>
       )}
     </div>
   );
