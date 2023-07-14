@@ -1,5 +1,8 @@
 
 .product-detail-container {
+  background-color: #f2f2f2;
+  width: 100%;
+  margin: 0 auto;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -8,51 +11,51 @@ justify-content: center;
   margin: 50px;
   position: relative;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 25px;
+  padding: 40px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   max-width: 60%;
   transition: transform 0.3s ease-in-out;
 
   &.cart-open {
-    transform: translateX(-100%); /* Desplaza el carrito hacia la izquierda al estar abierto */
+    transform: translateX(-100%);
   }
   .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 24px;
-    color: #999;
+    font-size: 25px;
+    color: #fff;
   }
 
   .product-image {
-    width: 100%;
-    height: 100%;
+    width: 40%;
     margin-bottom: 20px;
     border-radius: 50px;
   }
 
   .product-info {
     .product-name {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       margin-bottom: 10px;
+      font-weight: 700;
+
     }
 
     .product-description {
       margin-bottom: 10px;
+      font-size: 15px;
     }
 
     .product-price {
-      font-weight: 700;
+      font-weight: 900;
       float: right;
     }
 
     .quantity {
-      display: flex;
       align-items: center;
       margin-top: 20px;
       margin-bottom: 20px;
@@ -89,11 +92,9 @@ justify-content: center;
       color: white;
       padding: 10px;
       border: none;
-      border-radius: 5px;
       cursor: pointer;
-      display: block;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 20px;
 
       &:hover {
         background-color: #c87924;
@@ -102,7 +103,8 @@ justify-content: center;
 
     .product-price {
       font-size: 1.2rem;
-      margin-top: 10px;
+      margin-top: 20px;
+      margin-right: 20px;
     }
   }
   

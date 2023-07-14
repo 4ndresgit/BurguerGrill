@@ -31,7 +31,7 @@ const navigate = useNavigate();
   handleAddToCart(quantity);
   navigate('/cart');
 }}>
-          Agregar al pedido
+          AGREGAR A MI PEDIDO
         </button>
       </div>
     );
