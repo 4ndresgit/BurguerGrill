@@ -14,7 +14,6 @@ const CartItem = ({ product, removeFromCart }) => {
       <div className="item-details">
         <p>{descripcion}</p>
         <p>${precio} x {quantity} unidades</p>
-        <p>Total: ${precio*quantity}</p>
       </div>
       <button className="remove-button" onClick={handleRemove}>
         X
