@@ -13,7 +13,6 @@ import CartPage from "./components/CartPage/CartPage";
 import { CartProvider } from "./context/CartContext";
 
 function App() {
-
   return (
     <CartProvider>
       <Router>
@@ -27,7 +26,6 @@ function App() {
               path="/category/:categoryId"
               element={<ProductListContainer />}
             />
-
             <Route
               path="/products/:productId"
               element={<ProductDetailPage />}
