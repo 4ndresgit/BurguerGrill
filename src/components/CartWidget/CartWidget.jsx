@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Badge from 'react-bootstrap/Badge';
-import { useCart } from '../../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 
 function CartWidget() {
-  const { cart } = useCart();
+  const { cart } = useContext(CartContext);
   const cartItemCount = cart.reduce((total, product) => total + product.quantity, 0);
 
   return (
